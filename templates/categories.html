@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Categories</title>
+{% endblock %}
+
+{% block body %}
+<h1> All Categories </h1>
+<hr>
+
+{% for category in categories %}
+	<br>
+	<h2> {{category.name}} </h2>
+	<br>
+	<a class="btn btn-danger" href='/Categories/delete_category/{{category.id}}'>Delete</a>
+    <a class="btn btn-primary" href='/Categories/edit_category/{{category.id}}'>Edit</a>
+    <br>
+{% endfor %}
+<br>
+<a class="btn btn-danger" href='/Categories/new_category'>Add New Category</a>
+
+{% endblock %}
+

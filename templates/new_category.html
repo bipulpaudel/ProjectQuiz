@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> New Category </title>
+{% endblock %}
+
+{% block body %}
+
+<hr>
+<h2>Create New Category</h2>
+<form action = '/Categories' method = 'POST'>   
+    Name: 
+    <label for="name">Name</label>
+    <input class="form-control" type="text" name='name' id='name' placeholder="Enter Name" aria-label="Enter Name">
+    <br>
+    <br>
+    <input type = 'submit' value='Post'>
+</form>
+<hr>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Edit Category</title>
+{% endblock %}
+
+{% block body %}
+
+<hr>
+<h2>Edit Category</h2>
+<form action = '/Categories/edit_category/{{category.id}}' method = 'POST'>   
+    Name: 
+    <label for="name">Name</label>
+    <input class="form-control" type="text" name='name' id='name' value="{{category.name}}" aria-label="Enter name">
+    <br>
+    <input type = 'submit' value='Save'>
+</form>
+<hr>
+
+{% endblock %}
